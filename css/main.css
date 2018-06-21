@@ -1,6 +1,6 @@
 body {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.96);
   background-color: #695d51;
   /*background-color: #207380;*/
   /*background-color: #695e53;*/
@@ -58,13 +58,21 @@ b {
 }
 
 a {
-  color: #F09A4C;
+  color: rgba(240, 154, 76, 0.96);
   text-decoration: none;
 }
 a:hover,
 a:focus {
   text-decoration: none;
   color: #FFA859;
+}
+a[target='_blank']::after {
+  content: '\2006\29C9';
+  font-size: 0.7em;
+  vertical-align: super
+}
+a:hover[target='_blank']::after {
+  color: #F09A4C;
 }
 
 #footer {
@@ -85,7 +93,7 @@ summary {
 }
 
 summary::after{
-  content: "click to open";
+  content: 'click to open';
   font-size: 0.75em;
   font-style: italic;
   float: right;
@@ -93,7 +101,7 @@ summary::after{
 }
 
 details[open] summary::after{
-  content: "click to close";
+  content: 'click to close';
   font-size: 0.75em;
   font-style: italic;
   float: right;
