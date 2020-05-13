@@ -162,9 +162,6 @@ a.anchor {
 .roster li .role {
   font-style: italic;
 }
-.roster li .role::before {
-  content: " · ";
-}
 
 /* Banner images */
 
