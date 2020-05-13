@@ -4,20 +4,16 @@ body {
   background-color: #695d51;
   /*background-color: #207380;*/
   /*background-color: #695e53;*/
-  /* background-color: #3b7750; */
-  font-size: 1.5em;
+  /*background-color: #3b7750;*/
+  font-size: 22px;
   font-weight: 300;
   letter-spacing: 0.5px;
 }
 
 div#content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 
 div#title {
@@ -46,11 +42,12 @@ h4,
 h5,
 h6 {
   margin-bottom: 0.5em;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.35;
+  /* text-align: justify; */
 }
 
 b {
@@ -75,6 +72,27 @@ a:hover[target='_blank']::after {
   color: #F09A4C;
 }
 
+ul, ol {
+  padding-left: 1.5em;
+}
+
+/* Section headers */
+
+#header-wrapper {
+  background-color: #695d51;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+#header {
+  padding: 0 0 0.5em 0;
+  border-bottom: 1px solid #aaa;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 #footer {
   font-style: italic;
   text-align: center;
@@ -83,7 +101,16 @@ a:hover[target='_blank']::after {
   border-top: 1px solid #aaa;
 }
 
-summary {
+/* Section headers */
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -4em;
+  visibility: hidden;
+}
+
+.header {
   font-weight: 500;
   font-size: 1.17em;
   background-color: rgba(240, 154, 76, 0.5);
@@ -92,18 +119,68 @@ summary {
   border-top: 1px solid #aaa;
 }
 
-summary::after{
-  content: 'click to open';
-  font-size: 0.75em;
-  font-style: italic;
-  float: right;
-  padding: 0.25em 0.5em 0.5em 0.5em;
+/* Team roster */
+
+.roster {
+  padding-left: 0;
 }
 
-details[open] summary::after{
-  content: 'click to close';
-  font-size: 0.75em;
+.roster li {
+  list-style: none;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.roster li img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 0 1em 0.5em 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (min-width: 600px) {
+  .roster li {
+    display: flex;
+    text-align: left;
+  }
+  .roster li img {
+    flex: 0 0 150px;
+    margin: 0 1em 0.5em 0;
+  }
+}
+
+.roster li .bio {
+  flex: 1;
+  text-align: left;
+}
+
+.roster li .name {
+  margin-bottom: 0.25em;
+}
+
+.roster li .role {
   font-style: italic;
-  float: right;
-  padding: 0.25em 0.5em 0.5em 0.5em;
+}
+.roster li .role::before {
+  content: " · ";
+}
+
+/* Banner images */
+
+div.img {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+div.img img {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.img .caption {
+  text-align: left;
+  font-style: italic;
+  font-size: 90%;
 }
